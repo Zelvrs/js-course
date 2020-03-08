@@ -57,9 +57,29 @@ function showForm(id) {
             inputName.value = contact.name
             inputAddress.value = contact.address
             inputPhone.value = contact.phone
-            inputGroup.value = contact.group
-            console.log(contact)
+
+
+            if (contact.group !== undefined ) {
+                document.querySelector(`[name="group"][value="${contact.group}"]`).checked = true;
+               
+            }
         }
+    }
+}
+
+function parseGroup(group) {
+    switch (group) {
+        case 'family':
+            return 'Family'
+        case 'work':
+            return 'Work'
+
+        case 'friend':
+            return 'Friend'
+
+
+        default:
+            break;
     }
 }
 
@@ -86,7 +106,7 @@ function renderCard(contact) {
         <i class="material-icons mr-1">phone</i> ${contact.phone}
     </li>
     <li class="list-group-item d-flex align-items-center">
-        <i class="material-icons mr-1">people_alt</i> ${contact.group}
+        <i class="material-icons mr-1">people_alt</i> ${parseGroup(contact.group)}
     </li>
     `;
     card.append(listGroup);
@@ -190,7 +210,7 @@ form.addEventListener('submit', function (e) {
             name: inputName.value,
             address: inputAddress.value,
             phone: inputPhone.value,
-            group : inputGroup.value,
+            group: inputGroup.value,
         };
 
         contacts.push(contact);
