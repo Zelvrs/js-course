@@ -1,0 +1,11 @@
+.card-name {
+    animation: input 1s ease-in-out;
+}
+@keyframes input {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}

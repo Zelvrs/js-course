@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row bg-primary sticky-top mb-3">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto navbar navbar-expand-md navbar-dark">
+                <div class="navbar-brand">Contact</div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" >
+                            <a href="#" id="all" class="nav-link">All</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a href="#" id="family" class="nav-link">Family</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a href="#" id="work" class="nav-link">Work</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a href="#" id="friend" class="nav-link">Friend</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" id="addContact" class="nav-link d-flex align-items-center"><i class="material-icons md-16 mr-1 d-none d-md-inline">add</i> Add a new contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <main class="col-12 col-md-8 col-lg-6 mx-auto">
+                <div id="content" class="d-block ">
+                    <!-- <div class="card shadow-sm mb-3">
+                        <div class="card-header">
+                            <h4>Gazel</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="material-icons text-dark mr-3">place</i>
+                                <span>jl sena raya</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="material-icons text-dark mr-3">phone</i>
+                                <span>793691736981691</span>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+                
+                <form action="" id="form" class="d-none">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">address</label>
+                        <textarea name="address" id="address"  rows="4" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                            <label for="phone">phone</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="material-icons text-secondary">phone</i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="phone" id="phone">
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="group"> Group</label>
+                        <div class="form-check">
+                            <input type="radio" value="family" id="groupFamily" class="form-check-input" name="group">
+                            <label for="groupFamily"> Family</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" value="work" id="groupWork" class="form-check-input"  name="group">
+                            <label for="groupWork"> Work</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" value="friend" id="groupFriend" class="form-check-input"  name="group">
+                            <label for="groupFriend"> Friend</label>
+                        </div>
+
+                    </div>
+                    <button class="btn btn-primary mr-2">Submit</button>
+                    <a href="#" id="cancel">cancel</a>
+                </form>
+            </main>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: skyblue;
+}
+
+.wrapper {
+    padding: 5px;
+    margin: 0px auto;
+    background-color: blue;
+    
+}
+.ball {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: snow;
+}
+.button1 {
+    background-color: brown;
+    border-style: none;
+}
+.button2 {
+    background-color: chartreuse;
+    border-style: none;
+    
+}

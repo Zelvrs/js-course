@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(236, 250, 114);
+}
+.container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: sandybrown;
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+}
+input {
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+}
+button {
+    background-color: silver;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+input#text.wrong {
+    animation-name: dance;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+
+}
+@keyframes dance {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(30px);
+    }
+    60% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Trade Winds, sans-serif;
+}
+
+body {
+    background-color: cornflowerblue;
+    
+}
+.main {
+    
+    background-color: cornsilk;
+    margin: 0 auto ;
+    width: 500px;
+    height: auto;
+    align-items: center;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.barang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container label {
+    padding-left: 5px;
+}
+.total {
+    margin-left: 10px;
+}
