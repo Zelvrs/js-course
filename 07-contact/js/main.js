@@ -9,17 +9,15 @@ const inputPhone = document.querySelector('[name="phone"]');
 
 
 const aDelete = document.getElementById('delete')
-const aEdit = document.getElementById('delete')
+const aEdit = document.getElementById('edit')
 
-const aAll = document.getElementById('all')
-const aFamily = document.getElementById('family')
-const aWork = document.getElementById('work')
-const aFriend = document.getElementById('friend')
 
 
 
 let contacts = [];
 let idSelected = null;
+let activeNav = 'all';
+let search = '';
 
 let contactFromStorage = JSON.parse(localStorage.getItem('contacts'));
 if (contactFromStorage !== null) {
@@ -28,6 +26,18 @@ if (contactFromStorage !== null) {
 
 function updateStorage() {
     localStorage.setItem('contacts', JSON.stringify(contacts));
+}
+
+function updateNav() {
+    document.querySelectorAll('.nav-item').forEach(function (navItem) {
+        navItem.classList.remove('active')
+
+        if (navItem.children[0].dataset.link === activeNav) {
+            navItem.classList.add('active')
+        }
+    })
+
+
 }
 
 function uuidv4() {
@@ -59,9 +69,9 @@ function showForm(id) {
             inputPhone.value = contact.phone
 
 
-            if (contact.group !== undefined ) {
+            if (contact.group !== undefined) {
                 document.querySelector(`[name="group"][value="${contact.group}"]`).checked = true;
-               
+
             }
         }
     }
@@ -173,9 +183,26 @@ function showContent() {
 
     content.innerHTML = '';
 
+    let filteredContacts = [...contacts];
 
-    for (let i = 0; i < contacts.length; i++) {
-        let contact = contacts[i];
+    if (activeNav !== 'all' && activeNav !== 'add') {
+        filteredContacts = filteredContacts.filter(function (contact) {
+            return contact.group === activeNav;
+        })
+    }
+
+    
+
+    if (search.trim().length) {
+        filteredContacts = filteredContacts.filter(function(contact) {
+            return contact.name.search(new RegExp(search.trim(), 'i')) >= 0 ||
+                   contact.address.search(new RegExp(search.trim(), 'i')) >= 0 ||
+                      contact.phone.search(new RegExp(search.trim(), 'i')) >= 0;
+
+        })
+    }
+    for (let i = 0; i < filteredContacts.length; i++) {
+        let contact = filteredContacts[i];
 
         content.prepend(renderCard(contact));
     }
@@ -222,14 +249,36 @@ form.addEventListener('submit', function (e) {
     form.reset();
 
     idSelected = null;
-});
-aAddContact.addEventListener('click', function (e) {
-    e.preventDefault();
 
-    showForm();
-
-    idSelected = null;
+    activeNav = 'all'
+    updateNav();
 });
+document.querySelectorAll('.nav-link').forEach(function (navLink) {
+    navLink.addEventListener('click', function (e) {
+
+
+        e.preventDefault();
+
+        let link = navLink.dataset.link;
+
+        activeNav = link;
+        updateNav();
+
+        switch (link) {
+            case 'add':
+                showForm();
+
+                idSelected = null;
+                break;
+
+            default:
+                showContent();;
+                break;
+        }
+    })
+})
+
+
 
 aCancel.addEventListener('click', function (e) {
     e.preventDefault();
@@ -237,7 +286,14 @@ aCancel.addEventListener('click', function (e) {
     showContent();
 });
 
+document.querySelector('[name="search"]').addEventListener('keyup', function (e) {
+    search = e.target.value;
+
+    showContent();
+})
+
 
 
 // jalan pertama kali
 showContent();
+updateNav();

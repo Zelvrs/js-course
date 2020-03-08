@@ -16,25 +16,30 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <input type="text" class="form-control" name="search">
 
                 <div class="collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item" >
-                            <a href="#" id="all" class="nav-link">All</a>
+                            <a href="#" id="all" class="nav-link" data-link="all">All</a>
                         </li>
                         <li class="nav-item" >
-                            <a href="#" id="family" class="nav-link">Family</a>
+                            <a href="#" id="family" class="nav-link" data-link="family">Family</a>
                         </li>
                         <li class="nav-item" >
-                            <a href="#" id="work" class="nav-link">Work</a>
+                            <a href="#" id="work" class="nav-link" data-link="work">Work</a>
                         </li>
                         <li class="nav-item" >
-                            <a href="#" id="friend" class="nav-link">Friend</a>
+                            <a href="#" id="friend" class="nav-link" data-link="friend">Friend</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" id="addContact" class="nav-link d-flex align-items-center"><i class="material-icons md-16 mr-1 d-none d-md-inline">add</i> Add a new contact</a>
+                            <a href="#" id="addContact" data-link="add" class="nav-link d-flex align-items-center"><i class="material-icons md-24 mr-1 d-none d-md-inline">add_circle</i>
+                            <span class="d-md-none d-inline"> Add new Contact</span>
+                            </a>
                         </li>
+                        
                     </ul>
+                    
                 </div>
             </div>
         </div>
