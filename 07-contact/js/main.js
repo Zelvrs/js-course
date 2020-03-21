@@ -191,13 +191,13 @@ function showContent() {
         })
     }
 
-    
+
 
     if (search.trim().length) {
-        filteredContacts = filteredContacts.filter(function(contact) {
+        filteredContacts = filteredContacts.filter(function (contact) {
             return contact.name.search(new RegExp(search.trim(), 'i')) >= 0 ||
-                   contact.address.search(new RegExp(search.trim(), 'i')) >= 0 ||
-                      contact.phone.search(new RegExp(search.trim(), 'i')) >= 0;
+                contact.address.search(new RegExp(search.trim(), 'i')) >= 0 ||
+                contact.phone.search(new RegExp(search.trim(), 'i')) >= 0;
 
         })
     }

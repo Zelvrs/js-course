@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row bg-primary sticky-top mb-3">
+            <div class="col-12  navbar  navbar-dark navbar-expand-lg ">
+                <div class="navbar-brand">Pasar Online</div>
+                <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-cat" data-category="all" data-link="all">Semua</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-cat" data-category="elektronik" data-link="elektronik">Elektronik</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-cat" data-category="fashion" data-link="fashion">Fashion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-cat" data-category="dapur" data-link="dapur">Dapur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-cat" data-category="gaming" data-link="gaming">Gaming</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link mr-3" data-toggle="modal" data-target="#exampleModal"
+                                id="add">Tambah</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5" id="content">
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <form action="#" id="form">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <label for="">Nama product</label>
+                                    <input type="text" class="form-control mb-4" name="nama"
+                                        placeholder="Masukan nama barang">
+
+                                    <label for="">Gambar url</label>
+                                    <input type="text" class="form-control mb-4" name="image"
+                                        placeholder="Masukan nama barang">
+
+                                    <label for="">lokasi</label>
+                                    <select class="form-control mb-4" name="location" id="">
+                                        <option value="jakut">Jakarta Utara</option>
+                                        <option value="jaksel">Jakarta Selatan</option>
+                                        <option value="jabar">Jakarta Barat</option>
+                                        <option value="jatim">Jakarta Timur</option>
+                                        <option value="japus">Jakarta pusat</option>
+                                    </select>
+                                    <div class="form-group mb-3">
+                                        <label for="">Harga</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Rp</span>
+
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="masukan harga"
+                                                name="price">
+                                        </div>
+                                    </div>
+
+                                    <label for="">Kategori</label>
+                                    <div class="form-check">
+                                        <input type="radio" name="kategori" value="elektronik" id="elektronik"
+                                            class="form-check-input" name="category">
+                                        <label for="elektronik" name="kategori"
+                                            class="form-check-label">Elektronik</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="kategori" value="fashion" id="fashion"
+                                            class="form-check-input" name="category">
+                                        <label for="fashion" class="form-check-label">Fashion</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="kategori" value="dapur" id="dapur"
+                                            class="form-check-input" name="category">
+                                        <label for="dapur" class="form-check-label">Dapur</label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input type="radio" name="kategori" value="gaming" id="gaming"
+                                            class="form-check-input" name="category">
+                                        <label for="gaming" class="form-check-label">Gaming</label>
+                                    </div>
+
+                                    <div class="form-group mb-4">
+                                        <label for="">penawaran</label>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="gratis" id="gratis"
+                                                value="gratis">
+                                            <label for="gratis">Gratis Ongkir</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="cashback"
+                                                id="cashback" value="cashback">
+                                            <label for="cashback">Cashback</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="diskon" id="diskon"
+                                                value="diskon">
+                                            <label for="diskon">Diskon</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary" id="save">Save changes</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

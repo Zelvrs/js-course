@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row bg-warning sticky-top mb-3">
+            <div class="col-12  navbar  navbar-dark navbar-expand-md  ">
+                <div class="navbar-brand">Pasar Online</div>
+                <button class="navbar-toggler collapsed " data-toggle="collapse" data-target="#sidebar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form action="#" id="form" class="w-100">
+                    <div class="input-group  w-100 my-3 my-md-0">
+                        <input type="text" class="form-control " name="search">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-dark d-block" ><i class="material-icons" style="font-size: 18px;color: white">search</i></button>
+                        </div>
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container  ">
+                <div class="row" >
+                    <div class="col-12 col-md-3 d-md-block mb-3 mb-md-0 navbar-toggler collapse " id="sidebar"  >
+                        <form action="#" id="formFilter">
+                            <div class="form-group">
+                                <label for="category">Kategori</label>
+                                <div class="form-check">
+                                    <input class="form-check-input cbCategory" type="radio" name="category" id="elektronik" value="elektronik">
+                                    <label class="form-check-label" for="elektronik">Elektronik</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbCategory" type="radio" name="category" id="fashion" value="fashion">
+                                    <label class="form-check-label" for="fashion">Fashion</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbCategory" type="radio" name="category" id="dapur" value="dapur">
+                                    <label class="form-check-label" for="dapur">Dapur</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbCategory" type="radio" name="category" id="gaming" value="gaming">
+                                    <label class="form-check-label" for="gaming">Gaming</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Lokasi</label>
+                                <div class="form-check">
+                                    <input class="form-check-input cbLocation cbFilter" type="checkbox" name="locationJakartaPusat" id="locationJakartaPusat" value="japus">
+                                    <label class="form-check-label" for="locationJakartaPusat">Jakarta Pusat</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbLocation cbFilter" type="checkbox" name="locationJakartaUtara" id="locationJakartaUtara" value="jakut">
+                                    <label class="form-check-label" for="locationJakartaUtara">Jakarta Utara</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbLocation cbFilter" type="checkbox" name="locationJakartaTimur" id="locationJakartaTimur" value="jatim">
+                                    <label class="form-check-label" for="locationJakartaTimur">Jakarta Timur</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbLocation cbFilter" type="checkbox" name="locationJakartaSelatan" id="locationJakartaSelatan" value="jaksel">
+                                    <label class="form-check-label" for="locationJakartaSelatan">Jakarta Selatan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbLocation cbFilter" type="checkbox" name="locationJakartaBarat" id="locationJakartaBarat" value="jabar">
+                                    <label class="form-check-label" for="locationJakartaBarat">Jakarta Barat</label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label for="offerings">Penawaran</label>
+                                <div class="form-check">
+                                    <input class="form-check-input cbOffering cbFilter" type="checkbox" name="gratis" id="gratis" value="gratis">
+                                    <label class="form-check-label" for="gratis">Gratis Ongkir</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbOffering cbFilter" type="checkbox" name="cashback" id="cashback" value="cashback">
+                                    <label class="form-check-label" for="cashback">Cashback</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input cbOffering cbFilter" type="checkbox" name="diskon" id="diskon" value="diskon">
+                                    <label class="form-check-label" for="diskon">Diskon</label>
+                                </div>
+                            </div>
+                            
+                        
+
+                        </form>
+                        <hr>
+                        <label>Harga</label>
+                        <form action="#" id="pricemin">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Rp</span>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Harga minimum" id="minimumPrice" name="pricemin">
+                                </div>
+                            </div>
+                        </form>
+                        <form action="#" id="pricemax">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Rp</span>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Harga maximum" id="maximumPrice" name="pricemax">
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <button type="button" class="btn btn-primary" id="btnReset">Reset</button>
+
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4" id="content">
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
