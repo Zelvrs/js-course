@@ -15,26 +15,34 @@
     <div class="container-fluid">
         <div class="row bg-warning sticky-top mb-3">
             <div class="col-12  navbar  navbar-dark navbar-expand-md  ">
-                <div class="navbar-brand">Pasar Online</div>
+                <div class="navbar-brand" id="home">Pasar Online</div>
                 <button class="navbar-toggler collapsed " data-toggle="collapse" data-target="#sidebar"
                     aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <form action="#" id="form" class="w-100">
                     <div class="input-group  w-100 my-3 my-md-0">
-                        <input type="text" class="form-control " name="search">
+                        <input type="text" class="form-control " id="search">
                         <div class="input-group-append">
                             <button type="submit" class="btn btn-dark d-block" ><i class="material-icons" style="font-size: 18px;color: white">search</i></button>
                         </div>
                     </div>
                 </form>
-               
+                <a href="#" class="btn ml-1 d-flex position-relative" id="navWishlist">
+                    <i class="material-icons text-black">favorite</i>
+                    <span id="badgeWishlist" class="badge badge-pill badge-danger position-absolute d-none" style="right: 1px; top: 1px;">1</span>
+                </a>
+
+                <a href="#" class="btn ml-1 d-flex position-relative" id="navCart">
+                    <i class="material-icons text-black">shopping_cart</i>
+                    <span id="badgeCart" class="badge badge-pill badge-danger position-absolute" style="right: 1px; top: 1px;"></span>
+                </a>
             </div>
         </div>
 
         <div class="row">
             <div class="container  ">
-                <div class="row" >
+                <div class="row" id="items-page" >
                     <div class="col-12 col-md-3 d-md-block mb-3 mb-md-0 navbar-toggler collapse " id="sidebar"  >
                         <form action="#" id="formFilter">
                             <div class="form-group">
@@ -133,7 +141,17 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="row" id="cart-page">
+                    <div class="col-12 col-md-3 mt-3">
+                        <h4>Total</h4>
+                        <h5 class="text-primary" id="rp-total-price">Rp total price</h5>
+                    </div>
+                   <div class="col-12 col-md-9 my-3">
+                       <div class="row row-cols-1" id="content-shoping-carts"> 
+                           
+                       </div>
+                   </div>
+                </div>
             </div>
         </div>
       
